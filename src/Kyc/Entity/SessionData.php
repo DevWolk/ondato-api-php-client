@@ -73,7 +73,7 @@ class SessionData
 
     public function setPersonalIdentityCode(string $personalIdentityCode): SessionData
     {
-        $this->personalIdentityCode = $personCode;
+        $this->personalIdentityCode = $personalIdentityCode;
 
         return $this;
     }

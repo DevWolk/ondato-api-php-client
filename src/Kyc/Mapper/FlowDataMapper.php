@@ -5,7 +5,6 @@ namespace Velser\OndatoApiClient\Kyc\Mapper;
 
 use Velser\OndatoApiClient\DenormalizerInterface;
 use Velser\OndatoApiClient\Kyc\Entity\FlowData;
-use Velser\OndatoApiClient\Kyc\Entity\SessionData;
 use Velser\OndatoApiClient\NormalizerInterface;
 
 class FlowDataMapper implements NormalizerInterface, DenormalizerInterface
@@ -15,7 +14,7 @@ class FlowDataMapper implements NormalizerInterface, DenormalizerInterface
         return (new FlowData())
             ->setLanguage($data['language'])
             ->setRedirectUrl($data['redirectUrl'])
-            ->setFormType($data['formType'])
+            ->setIdentificationType($data['identificationType'])
             ;
     }
 
@@ -28,7 +27,7 @@ class FlowDataMapper implements NormalizerInterface, DenormalizerInterface
         return array_filter([
             'language' => $entity->getLanguage(),
             'redirectUrl' => $entity->getRedirectUrl(),
-            'formType' => $entity->getFormType(),
+            'identificationType' => $entity->getIdentificationType(),
         ]);
     }
 }

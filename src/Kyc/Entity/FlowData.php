@@ -8,7 +8,7 @@ class FlowData
 {
     private $language;
     private $redirectUrl;
-    private $formType;
+    private $identificationType;
 
     public function getLanguage(): string
     {
@@ -34,14 +34,14 @@ class FlowData
         return $this;
     }
 
-    public function getFormType(): ?string
+    public function getIdentificationType(): ?string
     {
-        return $this->formType;
+        return $this->identificationType;
     }
 
-    public function setFormType(string $formType): FlowData
+    public function setIdentificationType(string $identificationType): FlowData
     {
-        $this->formType = $formType;
+        $this->identificationType = $identificationType;
 
         return $this;
     }
